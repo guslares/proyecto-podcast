@@ -1,0 +1,453 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: #fff;
+    
+}
+a{
+    color:#fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+}
+
+h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+    
+}
+h3{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    padding: 0 5%;
+    margin:10px 0 50px 0;
+}
+p{
+    font-family: 'IBM Plex Mono', monospace;
+   font-size: 14px;
+   line-height: 22px;
+}
+button{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+.header{
+    background-color: #fff;
+    height: 44px;
+    width: 100%;
+    position: sticky;
+    z-index: 3;
+}
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #0000EC;
+}
+.header ul a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.header ul a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+} 
+.header ul a:active {
+    color: rgba(6,10,36,0.56) ;
+    text-decoration: line-through;
+}
+.header .navbar_logo{
+    float: left;
+    display: block;
+    padding: 10px 8px 0px 8px;
+}
+
+.header .navbar_menu{
+    clear: both;
+    max-height: 0;
+    transition:max-height .2s ease-out;
+}
+/* menu hamburguesa con css */
+.header .hamburguer_btn_icon{
+    /* border: 1px solid red; */
+    padding: 21px 20px;
+    position: relative;
+    float: right ;
+    cursor: pointer;
+}
+
+.header .hamburguer_btn_icon .nav_icon{
+    background-color: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition:background .2s ease-out;
+}
+.header .hamburguer_btn_icon .nav_icon:before{
+    background-color: #333;
+    content:'';
+    display:block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition:all .2s ease-out;
+    top: 5px;
+}
+.header .hamburguer_btn_icon .nav_icon:after{
+    background-color: #333;
+    content:'';
+    display:block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition:all .2s ease-out;
+    top: -5px;
+}
+
+.header .hamburguer_btn {
+    display: none;
+}
+
+.header .hamburguer_btn:checked ~.navbar_menu{
+    max-height: 240px;
+}
+.header .hamburguer_btn:checked ~.hamburguer_btn_icon .nav_icon{
+    background-color: transparent;
+}
+.header .hamburguer_btn:checked ~.hamburguer_btn_icon .nav_icon:before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.header .hamburguer_btn:checked ~.hamburguer_btn_icon .nav_icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+.main .texto{
+    margin: 5%;
+    top:0;
+}
+.main .boton_conocemas {
+   text-align: center;
+}
+.main .boton_conocemas button{
+    background-color: #00F3BB;
+    color: #060A24;
+    border: 0px;
+    width: 90%;
+    height: 46px;
+   
+}
+.main .boton_conocemas button:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #00F0B8,#0000FE);
+}
+/*episodios*/
+.main .episodios{
+    background-image: linear-gradient(225deg, #0000FF, #0000A3);
+    clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+    height: 1150px;
+    margin-top: 20px;
+}
+
+.main .episodios .episodios_tabla_flex
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+.main .episodios .episodios_tabla_flex iframe{
+    justify-content: center;
+    height: 232px;
+    width: auto;
+    margin-bottom: 3px;
+    border:none;
+
+}
+.main .episodios h2{
+    
+    padding-top: 13%;
+    padding-left: 3%;
+    color: #fff;
+}
+/*de donde venimos*/
+
+.DeDondeVenimos{
+top: -80px;
+position: relative;
+}
+.DeDondeVenimos_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.DeDondeVenimos .DeDondeVenimos_imagen img{
+    width: 298px;
+    height: auto;
+    
+}
+.DeDondeVenimos .DeDondeVenimos_flex .DeDondeVenimos_texto{
+    margin: 5%;
+
+}
+.invitados{
+    top:-100px;
+}
+.invitados img{
+    width: 100%;
+}
+.invitados h2{
+    margin-left: 5%;
+}  
+.invitados .invitados_flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.temas { 
+    margin-top: 40px;
+}
+.temas h2{
+    margin-left: 5%;
+    margin-bottom: 30px;
+}
+.temas .temas_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.temas .temas_img{
+    width: 100%;
+    text-align: center;
+}
+.novedades{
+    text-align: center;
+    background-image: linear-gradient(225deg, #0000FF, #0000A3);
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    height: 280px;
+    padding-top: 20% ;
+    margin-top: 10px;
+}
+.novedades h2{
+    margin-left: 5%;
+    margin-bottom: 20px;
+    text-align: center; 
+    color: #fff;
+    top: -10px;
+}
+.novedades .boton_novedades button{
+    background-color: #00F3BB;
+    color: #060A24;
+    border: 0px;
+    width: 90%;
+    height: 56px;
+}
+.footer_texto{
+    text-align: center;
+}
+.footer_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px 0 ;
+}
+.contenedor_footer{
+    margin: 30px 0 30px 0;
+}
+.contenedor_footer .footer_flex a{
+    color: #060A24 ;
+}
+
+/*mediaquery para desktop */
+@media (min-width:769px){
+
+    a{
+        color: #060A24;
+    }
+    .header{
+        height: 80px;
+    }
+    h2{
+        font-size: 48px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .header li{ 
+        float: left;
+    }
+    .header li a {
+        padding: 30px 40px;
+    } 
+    .header li a:last-child{
+        padding-right: 50px;
+    }
+    .header .navbar_menu{
+        clear: none;
+        float: right;
+        max-height: none;
+        background-color: #fff;
+    }
+    .header .hamburguer_btn_icon{
+        display: none;
+    }
+    .header .navbar_logo {
+        /* height: 80px; */
+        padding: 20px 0px 0 25px ;
+
+    } 
+    .header .navbar_logo img{
+        height: 36px;
+        width: 36px;
+    
+    }
+    .main .texto h2{
+        font-size: 64px;
+        margin-left: 10%;
+    }
+    .main .texto p{
+        width: 50%;
+    }
+
+    .main .boton_conocemas {
+        margin-left: 5%;
+        text-align: left;
+        width: 226px;
+     }
+     .main .episodios{
+        background-image: linear-gradient(#0000FF, #0000A3);
+        clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
+        height: 900px;
+    }
+    .main .episodios h2{
+    
+        padding-top: 7%;
+        padding-left: 10%;
+    }
+           
+    .episodios .episodios_tabla_flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 600px;
+    top: -10px;
+    
+    /* justify-content: space-between; */
+    /* align-content: space-around; */
+    
+    }
+    .main .episodios .episodios_tabla_flex iframe{
+        margin: 2%;
+        height: auto;
+        width: 40%;
+        
+    }
+    .DeDondeVenimos{
+        top: -100px;
+    }
+    .DeDondeVenimos_flex{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-around;     */
+    
+    }
+    .DeDondeVenimos .DeDondeVenimos_flex .dedonde{
+      position: relative;
+      width: 33%;
+      margin: 0;
+     }
+    .DeDondeVenimos .DeDondeVenimos_texto{
+         padding-top: 10%;
+     }
+     .invitados{
+        top:-100px;
+    }
+    .invitados img{
+        width: 33%;
+    }
+    .invitados h2{
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }  
+     .invitados .invitados_flex{
+        display: flex;
+        flex-wrap: wrap;
+     }
+     .temas { 
+        margin-top: 40px;
+    }
+    .temas h2{
+        margin-left: 7%;
+        margin-bottom: 40px;
+    }
+    .temas .temas_flex{
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+    .temas .temas_img{
+        width: 15%;
+        text-align: center;
+        
+    }
+    .novedades{
+        text-align: center;
+        background-image: linear-gradient(225deg, #0000FF, #0000A3);
+        clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+        height: 100px;
+        padding-top: 5% ;
+        padding-bottom: 13% ;
+        /* margin-top: 10px; */
+    }
+    .novedades h2{
+        margin-left: 5%;
+        margin-bottom: 20px;
+        text-align: center; 
+        color: #fff;
+        top: -10px;
+    }
+    .novedades .boton_novedades button{
+        background-color: #00F3BB;
+        color: #060A24;
+        border: 0px;
+        width: 345px;
+        height: 56px;
+        margin-top: 20px;
+    }
+    .contenedor_footer{
+        /* display: flex; */
+        justify-content: space-between;
+        margin: 30px 5% 40px 5%;
+        padding: 1%;
+    }
+
+    .contenedor_footer .footer_texto{
+        float: left;
+        text-align: center;
+    }
+    .contenedor_footer .footer_texto p{
+    margin: 0;
+    }
+    /*redes*/
+    .footer_flex{
+        float: right;
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0;
+    }
+
+}
